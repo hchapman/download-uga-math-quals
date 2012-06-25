@@ -1,0 +1,10 @@
+Summary
+===============
+This is a quick bash script to download UGA mathematics qualifying exams all at once so you don't have to click each of them individually (e.g. to make an up to date packet of quals).
+
+Right now it only will download the .pdf files, and right now it's just for topology. Fix it yourself (for now) and commit it yourself??
+
+Usage
+===============
+It's pretty simple.
+     $ sh download_quals.sh

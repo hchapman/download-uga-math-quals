@@ -4,6 +4,12 @@ This is a quick bash script to download UGA mathematics qualifying exams all at 
 
 Right now it only will download the .pdf files, and right now it's just for topology. Fix it yourself (for now) and commit it yourself??
 
+Requirements
+===============
+`download_quals.sh` requires wget, which might not be on OS X by default. Use brew!
+
+`join_quals.sh` requires poppler, which isn't on OS X to start. Use brew (again)!
+
 Usage
 ===============
 It's pretty simple.

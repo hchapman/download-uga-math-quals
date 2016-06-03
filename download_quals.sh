@@ -1,9 +1,10 @@
-TFILE=`mktemp`
+TFILE=`mktemp -t quals`
 
-curl http://www.math.uga.edu/graduate/oldqualifyingexams.htm | \
-    grep -i topology | \
+curl http://www.math.uga.edu/qualifying-exams/Topology | \
     grep -i pdf | \
-    sed -e 's/.*="\(.*\.pdf\)".*/http:\/\/www.math.uga.edu\/graduate\/\1/g' > $TFILE
+    grep -iv campus | \
+    sed -e 's/.*="\(.*\.pdf\)".*/\1/g' > $TFILE
 echo $TFILE
+cat $TFILE
 wget -i $TFILE
 rm $TFILE

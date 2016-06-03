@@ -5,7 +5,7 @@
 # Requires wget, which might not be installed on OS X (use brew!)
 
 TFILE=`mktemp -t quals`
-SUBJ=Topology
+SUBJ=${1:-Topology}
 
 curl http://www.math.uga.edu/qualifying-exams/$SUBJ | \
     grep -i pdf | \

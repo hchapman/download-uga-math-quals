@@ -6,4 +6,4 @@
 
 SUBJ=${1:-Topology}
 
-find $SUBJ -name \*\.pdf | sort -r -t _ | xargs -J {} pdfunite {} "$SUBJ"_thru_`date "+%m_%Y"`.pdf
+find $SUBJ -name \*\.pdf | sort -r -t _ | xargs bash ./poppler_proxy.sh "$SUBJ"_thru_`date "+%m_%Y"`.pdf
